@@ -1,6 +1,6 @@
 # spark-docker-base-images
 
-![docker](https://img.shields.io/badge/docker-%3E=_19.03.13-brightgreen.svg?style=flat&logo=docker)
+![docker](https://img.shields.io/badge/docker-%3E=_20.10.05-brightgreen.svg?style=flat&logo=docker)
 
 ## Prerequisites
 
