@@ -1,0 +1,20 @@
+name: markdown lint
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: Docker Compose pull
+        run: docker-compose pull md_lint
+
+      - name: Cache Docker images
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        # Ignore the failure of a step and avoid terminating the job.
+        continue-on-error: true
+
+      - name: Lint
+        run: docker-compose run --rm md_lint README.md

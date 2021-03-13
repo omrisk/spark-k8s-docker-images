@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  md_lint:
+    image: 06kellyjac/markdownlint-cli:latest
+    container_name: md_lint
+    volumes:
+      - .:/markdown
+    command: . --ignore ./spark-workspace --fix
+
+  mvn:
+    build: 
+      dockerfile: Dockerfile.mvndev
+      context: .
+    container_name: event-collection-dev
+    volumes:
+      - ~/.m2:/root/.m2
+      - .:/app
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    working_dir: /app
