@@ -10,7 +10,7 @@ updates:
       interval: "daily"
     commit-message:
       # Prefix all commit messages with "actions"
-      prefix: "dependabot-actions"
+      prefix: "actions"
 
   # Maintain dependencies for Docker images
   - package-ecosystem: "docker"
@@ -19,15 +19,13 @@ updates:
       interval: "daily"
     commit-message:
       # Prefix all commit messages with "actions"
-      prefix: "dependabot-docker"
+      prefix: "docker"
 
   # Maintain dependencies for Spark core distributions
-  - package-ecosystem: "java:maven
-"
+  - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
     commit-message:
       # Prefix all commit messages with "actions"
-      prefix: "dependabot-new-spark-distributions"
- 
+      prefix: "spark"
