@@ -39,8 +39,10 @@ Building Spark docker images requires building from source, run the following lo
 
 ```shell
 docker-compose run mvn
-./dev-script/builder.sh -a
+./dev-script/builder.sh -a <Spark version to build>
 ```
+
+Not providing a `Spark version to build` will result in the default version being selected, see [spark-version-deps.json](dev-scripts/spark-version-deps.json).
 
 ## Updating dependencies
 
