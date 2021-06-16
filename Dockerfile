@@ -3,7 +3,7 @@ ARG DOCKER_IMAGE_TAG
 ARG HADOOP_AWS_VERSION
 ARG AWS_SDK_VERSION
 
-FROM alpine:3.10 as base
+FROM alpine:3.14.0 as base
 WORKDIR /tmp
 # Redeclare so can be used in this stage
 ARG HADOOP_AWS_VERSION
